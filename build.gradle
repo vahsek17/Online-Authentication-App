@@ -1,0 +1,23 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.2.0"
+        classpath 'com.google.gms:google-services:4.3.5'
+    }
+}
+
+allprojects {
+    repositories {
+        //maven {url 'https://github.com/jitsi/jitsi-maven-repository/raw/master/releases'}
+        google()
+        mavenCentral()
+        jcenter()
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

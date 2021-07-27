@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/android_background"
+    tools:context=".DashBoardActivity">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="492dp"
+        app:layout_constraintBottom_toTopOf="@id/horizontalBottom"
+        app:layout_constraintEnd_toEndOf="@+id/verticalRight"
+        app:layout_constraintStart_toStartOf="@+id/verticalLeft"
+        app:layout_constraintTop_toTopOf="@id/horizontalTop" />
+
+    <ImageButton
+        android:id="@+id/history"
+        android:background="@drawable/small_square_button"
+        android:src="@drawable/history"
+        android:tint="@color/purple_500"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalBottom"
+        android:scaleType="fitXY"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical2"
+        app:layout_constraintStart_toStartOf="@+id/verticalLeft" />
+
+    <ImageButton
+        android:id="@+id/play"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="275dp"
+        android:background="@drawable/round_button"
+        android:src="@drawable/roundtable"
+        android:scaleType="fitXY"
+
+        app:layout_constraintBottom_toTopOf="@id/horizontalBottom"
+        app:layout_constraintEnd_toEndOf="@+id/verticalRight"
+        app:layout_constraintStart_toStartOf="@+id/verticalLeft"
+        app:layout_constraintTop_toTopOf="@id/horizontalTop" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="193dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="150dp"
+        android:gravity="center"
+        android:text="Start Automatching?"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalBottom"
+        app:layout_constraintEnd_toStartOf="@+id/verticalRight"
+        app:layout_constraintStart_toStartOf="@+id/verticalLeft"
+        app:layout_constraintTop_toTopOf="@+id/fragment_container" />
+
+    <ImageButton
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/small_square_button"
+        android:src="@drawable/logout"
+
+        android:tint="@color/red"
+        app:layout_constraintEnd_toStartOf="@+id/vertical2"
+        app:layout_constraintStart_toStartOf="@+id/verticalLeft"
+        app:layout_constraintTop_toTopOf="@id/horizontalTop" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_Navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@color/sea_green"
+        app:itemRippleColor="@color/sea_green"
+        app:itemBackground="@color/black"
+        app:itemTextColor="@color/sea_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+</androidx.constraintlayout.widget.ConstraintLayout>
